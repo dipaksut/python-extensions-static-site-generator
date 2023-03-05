@@ -1,7 +1,5 @@
-from ssg import hooks
-
 import time
-
+from ssg import hooks
 
 start_time = None
 total_written = 0
@@ -23,7 +21,6 @@ def written():
 def stats():
     final_time = time.time() - start_time
     average = final_time / total_written if total_written else 0
-    report = "Converted: {}  Time: {:.2f} sec  Avg: {:.4f} sec/file"
+    report = "Converted: {} · Time: {:.2f} sec · Avg: {:.4f} sec/file"
     print(report.format(total_written, final_time, average))
-
 
